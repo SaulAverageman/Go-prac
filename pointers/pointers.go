@@ -1,4 +1,4 @@
-package ses2
+package pointers
 
 func main() {
 
