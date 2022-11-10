@@ -1,4 +1,4 @@
-package main
+package ses1
 
 import "fmt"
 
