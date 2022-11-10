@@ -1,4 +1,4 @@
-package ses0
+package main
 
 func isAnagram(s string, t string) bool {
 	return arrayfy(s) == arrayfy(t)
