@@ -13,6 +13,10 @@ type Bdata struct {
 	DOB        time.Time
 }
 
+func (dataInstance Bdata) changeFName() {
+	dataInstance.FirstName = "Fred"
+}
+
 func main() {
 	//struct assignment
 	bigman := Bdata{
@@ -26,6 +30,7 @@ func main() {
 
 	fmt.Println(bigman.FirstName, bigman.MiddleName, " born on:", bigman.DOB)
 	fmt.Println(alsobigman.age)
+	bigman.changeFName()
 
 	//function associated with data type
 	person1 := data{
@@ -36,6 +41,7 @@ func main() {
 		Name: "Reddy",
 		Age:  17,
 	}
+
 	checkAssociatedFunc(person1)
 	checkAssociatedFunc(person2)
 }
