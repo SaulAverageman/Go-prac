@@ -5,10 +5,17 @@ import (
 	"net/http"
 )
 
-func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Who dares?")
-	})
+func home(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Who dares call home?")
+}
 
-	http.ListenAndServe(":9090", nil)
+func about(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "We do nothing.")
+}
+
+func main() {
+	http.HandleFunc("/", home)
+	http.HandleFunc("/about", about)
+
+	http.ListenAndServe(":8000", nil)
 }
